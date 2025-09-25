@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LandingPage from "@/pages/LandingPage";
 import LoginPage from "@/pages/LoginPage";
+import RegistrationPage from "@/pages/RegistrationPage";
 import StudentDashboard from "@/pages/StudentDashboard";
 import AICareerChat from "@/pages/AICareerChat";
 import ScholarshipAI from "@/pages/ScholarshipAI";
@@ -27,6 +28,7 @@ const App = () => (
             <Routes>
               <Route path="/" element={<LandingPage />} />
               <Route path="/login/:role" element={<LoginPage />} />
+              <Route path="/register/:role" element={<RegistrationPage />} />
               <Route path="/student/dashboard" element={<StudentDashboard />} />
               <Route path="/student/career-ai" element={<AICareerChat />} />
               <Route path="/student/scholarship-ai" element={<ScholarshipAI />} />

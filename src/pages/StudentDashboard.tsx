@@ -77,12 +77,6 @@ const StudentDashboard = () => {
       link: "/student/streams"
     },
     {
-      title: "Aptitude Test",
-      description: "Take comprehensive tests to discover your strengths",
-      icon: TrendingUp,
-      link: "/student/aptitude-test"
-    },
-    {
       title: "Academic Resources",
       description: "Access study materials and guidance lectures",
       icon: BookOpen,
@@ -123,6 +117,29 @@ const StudentDashboard = () => {
             </Card>
           ))}
         </div>
+
+        {/* Aptitude Test - Primary CTA */}
+        <Card className="mb-8 border-2 border-primary/20 bg-gradient-to-r from-primary/5 to-secondary/5">
+          <CardContent className="p-6">
+            <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+              <div className="flex items-center space-x-4">
+                <div className="p-4 bg-gradient-to-br from-primary to-primary-light rounded-xl">
+                  <TrendingUp className="h-8 w-8 text-white" />
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-primary mb-2">Discover Your Perfect Career Path</h2>
+                  <p className="text-muted-foreground">Take our comprehensive aptitude test to uncover your strengths and find the ideal career match</p>
+                </div>
+              </div>
+              <Link to="/student/aptitude-test">
+                <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:from-primary-dark hover:to-secondary-dark text-white px-8">
+                  <TrendingUp className="mr-2 h-5 w-5" />
+                  Start Aptitude Test
+                </Button>
+              </Link>
+            </div>
+          </CardContent>
+        </Card>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content */}

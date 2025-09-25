@@ -1,4 +1,4 @@
-import { GraduationCap, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { GraduationCap, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Bot, Award, School } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -34,14 +34,37 @@ const Footer = () => {
             </div>
           </div>
 
+          {/* AI Features */}
+          <div className="space-y-4">
+            <h3 className="font-semibold text-lg text-accent-light">AI-Powered Features</h3>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <Link to="/student/career-ai" className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors font-medium">
+                  <Bot className="h-4 w-4" />
+                  <span>Career Path AI</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/student/scholarship-ai" className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors font-medium">
+                  <Award className="h-4 w-4" />
+                  <span>Scholarship AI</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/student/colleges" className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors font-medium">
+                  <School className="h-4 w-4" />
+                  <span>Colleges</span>
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Quick Links */}
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li><Link to="/about" className="text-white/80 hover:text-white transition-colors">About Us</Link></li>
               <li><Link to="/careers" className="text-white/80 hover:text-white transition-colors">Career Paths</Link></li>
-              <li><Link to="/colleges" className="text-white/80 hover:text-white transition-colors">College Database</Link></li>
-              <li><Link to="/scholarships" className="text-white/80 hover:text-white transition-colors">Scholarships</Link></li>
               <li><Link to="/counselors" className="text-white/80 hover:text-white transition-colors">Find Counselors</Link></li>
               <li><Link to="/resources" className="text-white/80 hover:text-white transition-colors">Study Resources</Link></li>
             </ul>

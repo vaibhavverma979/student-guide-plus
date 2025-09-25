@@ -182,7 +182,7 @@
   }
 
   .role-card {
-    @apply feature-card text-center cursor-pointer group;
+    @apply feature-card text-center cursor-pointer;
   }
 
   .role-card:hover {

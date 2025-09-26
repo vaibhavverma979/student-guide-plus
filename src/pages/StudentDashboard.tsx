@@ -105,18 +105,6 @@ const StudentDashboard = () => {
       </div>
 
       <div className="section-container py-8">
-        {/* Quick Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          {quickStats.map((stat, index) => (
-            <Card key={index} className="text-center">
-              <CardContent className="p-4">
-                <stat.icon className={`h-6 w-6 mx-auto mb-2 ${stat.color}`} />
-                <div className="text-2xl font-bold">{stat.value}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
 
         {/* Aptitude Test - Primary CTA */}
         <Card className="mb-8 border-2 border-primary/20 bg-gradient-to-r from-primary/5 to-secondary/5">

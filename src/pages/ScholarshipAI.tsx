@@ -71,7 +71,7 @@ const ScholarshipAI = () => {
   const [scholarships] = useState<Scholarship[]>(mockScholarships);
   const [filteredScholarships, setFilteredScholarships] = useState<Scholarship[]>(mockScholarships);
   const [filters, setFilters] = useState({
-    category: "",
+    category: "all",
     minAmount: "",
     field: ""
   });
@@ -82,7 +82,7 @@ const ScholarshipAI = () => {
     
     let filtered = scholarships;
     
-    if (newFilters.category) {
+    if (newFilters.category && newFilters.category !== "all") {
       filtered = filtered.filter(s => s.category === newFilters.category);
     }
     
@@ -157,7 +157,7 @@ const ScholarshipAI = () => {
                       <SelectValue placeholder="All categories" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="">All categories</SelectItem>
+                      <SelectItem value="all">All categories</SelectItem>
                       <SelectItem value="Merit-based">Merit-based</SelectItem>
                       <SelectItem value="Need-based">Need-based</SelectItem>
                       <SelectItem value="Leadership">Leadership</SelectItem>
@@ -180,7 +180,7 @@ const ScholarshipAI = () => {
                   variant="outline" 
                   className="w-full"
                   onClick={() => {
-                    setFilters({ category: "", minAmount: "", field: "" });
+                    setFilters({ category: "all", minAmount: "", field: "" });
                     setFilteredScholarships(scholarships);
                   }}
                 >
@@ -279,7 +279,7 @@ const ScholarshipAI = () => {
                   </p>
                   <Button 
                     onClick={() => {
-                      setFilters({ category: "", minAmount: "", field: "" });
+                      setFilters({ category: "all", minAmount: "", field: "" });
                       setFilteredScholarships(scholarships);
                     }}
                   >

@@ -100,7 +100,7 @@ const CollegeSearch = () => {
   const [colleges] = useState<College[]>(mockColleges);
   const [filteredColleges, setFilteredColleges] = useState<College[]>(mockColleges);
   const [filters, setFilters] = useState({
-    type: "",
+    type: "all",
     location: "",
     program: "",
     searchTerm: ""
@@ -112,7 +112,7 @@ const CollegeSearch = () => {
     
     let filtered = colleges;
     
-    if (newFilters.type) {
+    if (newFilters.type && newFilters.type !== "all") {
       filtered = filtered.filter(c => c.type === newFilters.type);
     }
     
@@ -221,7 +221,7 @@ const CollegeSearch = () => {
                       <SelectValue placeholder="All types" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="">All types</SelectItem>
+                      <SelectItem value="all">All types</SelectItem>
                       <SelectItem value="Private University">Private University</SelectItem>
                       <SelectItem value="Public University">Public University</SelectItem>
                       <SelectItem value="Medical School">Medical School</SelectItem>
@@ -255,7 +255,7 @@ const CollegeSearch = () => {
                   variant="outline" 
                   className="w-full"
                   onClick={() => {
-                    setFilters({ type: "", location: "", program: "", searchTerm: "" });
+                    setFilters({ type: "all", location: "", program: "", searchTerm: "" });
                     setFilteredColleges(colleges);
                   }}
                 >
@@ -362,7 +362,7 @@ const CollegeSearch = () => {
                   </p>
                   <Button 
                     onClick={() => {
-                      setFilters({ type: "", location: "", program: "", searchTerm: "" });
+                      setFilters({ type: "all", location: "", program: "", searchTerm: "" });
                       setFilteredColleges(colleges);
                     }}
                   >

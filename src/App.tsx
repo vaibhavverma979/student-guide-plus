@@ -12,6 +12,8 @@ import StudentDashboard from "@/pages/StudentDashboard";
 import AICareerChat from "@/pages/AICareerChat";
 import ScholarshipAI from "@/pages/ScholarshipAI";
 import CollegeSearch from "@/pages/CollegeSearch";
+import StreamInformation from "@/pages/StreamInformation";
+import Counsellors from "@/pages/Counsellors";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +35,8 @@ const App = () => (
               <Route path="/student/career-ai" element={<AICareerChat />} />
               <Route path="/student/scholarship-ai" element={<ScholarshipAI />} />
               <Route path="/student/colleges" element={<CollegeSearch />} />
+              <Route path="/student/streams" element={<StreamInformation />} />
+              <Route path="/student/counsellors" element={<Counsellors />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

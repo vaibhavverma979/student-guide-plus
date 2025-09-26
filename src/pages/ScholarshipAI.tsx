@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { ArrowLeft, Award, DollarSign, Calendar, ExternalLink, Filter } from "lucide-react";
 import { Link } from "react-router-dom";
+import ScholarshipChatbot from "@/components/ScholarshipChatbot";
 
 interface Scholarship {
   id: number;
@@ -75,6 +76,7 @@ const ScholarshipAI = () => {
     minAmount: "",
     field: ""
   });
+  const [isChatbotOpen, setIsChatbotOpen] = useState(false);
 
   const handleFilterChange = (key: string, value: string) => {
     const newFilters = { ...filters, [key]: value };
@@ -291,6 +293,12 @@ const ScholarshipAI = () => {
           </div>
         </div>
       </div>
+
+      {/* Scholarship AI Chatbot */}
+      <ScholarshipChatbot 
+        isOpen={isChatbotOpen}
+        onToggle={() => setIsChatbotOpen(!isChatbotOpen)}
+      />
     </div>
   );
 };

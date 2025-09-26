@@ -89,17 +89,9 @@ const StudentDashboard = () => {
       {/* Welcome Section */}
       <div className="hero-gradient text-white py-12">
         <div className="section-container">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-3xl md:text-4xl font-bold mb-2">Welcome back, Student!</h1>
-              <p className="text-white/90 text-lg">Ready to explore your career possibilities today?</p>
-            </div>
-            <div className="hidden md:block">
-              <Button className="bg-white text-primary hover:bg-white/90">
-                <Search className="mr-2 h-4 w-4" />
-                Quick Search
-              </Button>
-            </div>
+          <div>
+            <h1 className="text-3xl md:text-4xl font-bold mb-2">Welcome back, Student!</h1>
+            <p className="text-white/90 text-lg">Ready to explore your career possibilities today?</p>
           </div>
         </div>
       </div>
@@ -108,20 +100,20 @@ const StudentDashboard = () => {
 
         {/* Aptitude Test - Primary CTA */}
         <Card className="mb-8 border-2 border-primary/20 bg-gradient-to-r from-primary/5 to-secondary/5">
-          <CardContent className="p-6">
-            <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-              <div className="flex items-center space-x-4">
-                <div className="p-4 bg-gradient-to-br from-primary to-primary-light rounded-xl">
-                  <TrendingUp className="h-8 w-8 text-white" />
+          <CardContent className="p-8 md:p-12">
+            <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+              <div className="flex items-center space-x-6">
+                <div className="p-6 bg-gradient-to-br from-primary to-primary-light rounded-xl">
+                  <TrendingUp className="h-12 w-12 text-white" />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-primary mb-2">Discover Your Perfect Career Path</h2>
-                  <p className="text-muted-foreground">Take our comprehensive aptitude test to uncover your strengths and find the ideal career match</p>
+                  <h2 className="text-3xl md:text-4xl font-bold text-primary mb-3">Discover Your Perfect Career Path</h2>
+                  <p className="text-muted-foreground text-lg">Take our comprehensive aptitude test to uncover your strengths and find the ideal career match</p>
                 </div>
               </div>
               <Link to="/student/aptitude-test">
-                <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:from-primary-dark hover:to-secondary-dark text-white px-8">
-                  <TrendingUp className="mr-2 h-5 w-5" />
+                <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:from-primary-dark hover:to-secondary-dark text-white px-12 py-4 text-lg">
+                  <TrendingUp className="mr-3 h-6 w-6" />
                   Start Aptitude Test
                 </Button>
               </Link>
@@ -235,6 +227,61 @@ const StudentDashboard = () => {
                 </Button>
               </CardContent>
             </Card>
+          </div>
+        </div>
+
+        {/* Student Dashboard Footer */}
+        <div className="mt-16 pt-8 border-t border-border">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-primary mb-2">Explore More Features</h3>
+            <p className="text-muted-foreground">Discover all the tools available to help you succeed</p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+            <Link to="/student/career-ai" className="group">
+              <div className="text-center p-4 rounded-lg hover:bg-muted/50 transition-colors">
+                <div className="p-3 bg-gradient-to-br from-primary to-primary-light rounded-lg w-fit mx-auto mb-3">
+                  <Bot className="h-6 w-6 text-white" />
+                </div>
+                <h4 className="font-semibold text-sm group-hover:text-primary">Career Path AI</h4>
+              </div>
+            </Link>
+            
+            <Link to="/student/scholarship-ai" className="group">
+              <div className="text-center p-4 rounded-lg hover:bg-muted/50 transition-colors">
+                <div className="p-3 bg-gradient-to-br from-secondary to-secondary-light rounded-lg w-fit mx-auto mb-3">
+                  <Award className="h-6 w-6 text-white" />
+                </div>
+                <h4 className="font-semibold text-sm group-hover:text-primary">Scholarship AI</h4>
+              </div>
+            </Link>
+            
+            <Link to="/student/colleges" className="group">
+              <div className="text-center p-4 rounded-lg hover:bg-muted/50 transition-colors">
+                <div className="p-3 bg-gradient-to-br from-accent to-accent-light rounded-lg w-fit mx-auto mb-3">
+                  <School className="h-6 w-6 text-white" />
+                </div>
+                <h4 className="font-semibold text-sm group-hover:text-primary">College Directory</h4>
+              </div>
+            </Link>
+            
+            <Link to="/student/streams" className="group">
+              <div className="text-center p-4 rounded-lg hover:bg-muted/50 transition-colors">
+                <div className="p-3 bg-gradient-to-br from-success to-success-light rounded-lg w-fit mx-auto mb-3">
+                  <BookOpen className="h-6 w-6 text-white" />
+                </div>
+                <h4 className="font-semibold text-sm group-hover:text-primary">Stream Information</h4>
+              </div>
+            </Link>
+            
+            <Link to="/student/counsellors" className="group">
+              <div className="text-center p-4 rounded-lg hover:bg-muted/50 transition-colors">
+                <div className="p-3 bg-gradient-to-br from-primary to-secondary rounded-lg w-fit mx-auto mb-3">
+                  <Users className="h-6 w-6 text-white" />
+                </div>
+                <h4 className="font-semibold text-sm group-hover:text-primary">Counsellors</h4>
+              </div>
+            </Link>
           </div>
         </div>
       </div>

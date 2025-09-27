@@ -12,16 +12,16 @@ interface RoleCardProps {
 }
 
 const gradientClasses = {
-  primary: "from-primary to-primary-light",
-  secondary: "from-secondary to-secondary-light", 
-  accent: "from-accent to-accent-light",
-  success: "from-success to-success-light"
+  primary: "bg-gradient-to-br from-primary to-primary-light",
+  secondary: "bg-gradient-to-br from-secondary to-secondary-light", 
+  accent: "bg-gradient-to-br from-accent to-accent-light",
+  success: "bg-gradient-to-br from-success to-success-light"
 };
 
 const RoleCard = ({ title, description, icon: Icon, features, onClick, gradient }: RoleCardProps) => {
   return (
-    <Card className="role-card group p-0 overflow-hidden">
-      <div className={`bg-gradient-to-br ${gradientClasses[gradient]} p-6 text-white`}>
+    <div className="role-card group p-0 overflow-hidden">
+      <div className={`${gradientClasses[gradient]} p-6 text-white`}>
         <div className="flex items-center justify-center mb-4">
           <div className="p-4 bg-white/20 rounded-full">
             <Icon className="h-8 w-8" />
@@ -35,7 +35,7 @@ const RoleCard = ({ title, description, icon: Icon, features, onClick, gradient 
         <ul className="space-y-2 mb-6">
           {features.map((feature, index) => (
             <li key={index} className="flex items-center text-sm text-muted-foreground">
-              <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 flex-shrink-0" />
+              <div className="w-1.5 h-1.5 bg-primary rounded-full ml-2 mr-3 flex-shrink-0" />
               {feature}
             </li>
           ))}
@@ -48,7 +48,7 @@ const RoleCard = ({ title, description, icon: Icon, features, onClick, gradient 
           Get Started as {title}
         </Button>
       </div>
-    </Card>
+    </div>
   );
 };
 
